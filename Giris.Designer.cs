@@ -49,7 +49,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Size = new System.Drawing.Size(427, 371);
+            this.groupBox1.Size = new System.Drawing.Size(491, 377);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kullanıcı Girişi";
@@ -57,7 +57,8 @@
             // btnGiris
             // 
             this.btnGiris.ForeColor = System.Drawing.Color.Black;
-            this.btnGiris.Location = new System.Drawing.Point(161, 117);
+            this.btnGiris.Location = new System.Drawing.Point(173, 133);
+            this.btnGiris.Margin = new System.Windows.Forms.Padding(0);
             this.btnGiris.Name = "btnGiris";
             this.btnGiris.Size = new System.Drawing.Size(173, 35);
             this.btnGiris.TabIndex = 5;
@@ -67,7 +68,7 @@
             // 
             // txtSifre
             // 
-            this.txtSifre.Location = new System.Drawing.Point(161, 81);
+            this.txtSifre.Location = new System.Drawing.Point(173, 90);
             this.txtSifre.Margin = new System.Windows.Forms.Padding(0);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.PasswordChar = '*';
@@ -76,11 +77,12 @@
             // 
             // txtKullaniciAdi
             // 
-            this.txtKullaniciAdi.Location = new System.Drawing.Point(161, 45);
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(173, 45);
             this.txtKullaniciAdi.Margin = new System.Windows.Forms.Padding(0);
             this.txtKullaniciAdi.Name = "txtKullaniciAdi";
             this.txtKullaniciAdi.Size = new System.Drawing.Size(173, 30);
             this.txtKullaniciAdi.TabIndex = 3;
+            this.txtKullaniciAdi.TextChanged += new System.EventHandler(this.txtKullaniciAdi_TextChanged);
             // 
             // label1
             // 
@@ -95,7 +97,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(97, 84);
+            this.label2.Location = new System.Drawing.Point(97, 93);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 25);
@@ -107,7 +109,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.ClientSize = new System.Drawing.Size(468, 418);
+            this.ClientSize = new System.Drawing.Size(522, 444);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -116,6 +118,7 @@
             this.Name = "Giris";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Giris";
+            this.Load += new System.EventHandler(this.Giris_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

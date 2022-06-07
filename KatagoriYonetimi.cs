@@ -166,6 +166,11 @@ namespace UrunYonetimiStokTakip
         {
             Application.Exit();
         }
+
+        private void dgwKatagoriler_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
            

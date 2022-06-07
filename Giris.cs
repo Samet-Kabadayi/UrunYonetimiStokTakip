@@ -29,6 +29,16 @@ namespace UrunYonetimiStokTakip
                 else MessageBox.Show("Giriş Başarısız!");
             }
         }
+
+        private void Giris_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtKullaniciAdi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
             

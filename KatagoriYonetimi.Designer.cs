@@ -135,6 +135,7 @@
             this.dgwKatagoriler.Size = new System.Drawing.Size(439, 464);
             this.dgwKatagoriler.TabIndex = 0;
             this.dgwKatagoriler.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwKatagoriler_CellClick);
+            this.dgwKatagoriler.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwKatagoriler_CellContentClick);
             // 
             // groupBox2
             // 

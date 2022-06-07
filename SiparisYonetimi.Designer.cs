@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.dgwSiparisler = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SiparisNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MusteriId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UrunId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SiparisTarihi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblid = new System.Windows.Forms.Label();
             this.btnSil = new System.Windows.Forms.Button();
@@ -49,11 +54,6 @@
             this.kullanıcıYönetimiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.müsteriYönetimiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.çıkışToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SiparisNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MusteriId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UrunId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SiparisTarihi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgwSiparisler)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -78,6 +78,41 @@
             this.dgwSiparisler.Size = new System.Drawing.Size(585, 491);
             this.dgwSiparisler.TabIndex = 0;
             this.dgwSiparisler.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwSiparisler_CellClick);
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "No";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
+            // 
+            // SiparisNo
+            // 
+            this.SiparisNo.DataPropertyName = "SiparisNo";
+            this.SiparisNo.HeaderText = "Sipariş Numarası";
+            this.SiparisNo.MinimumWidth = 6;
+            this.SiparisNo.Name = "SiparisNo";
+            // 
+            // MusteriId
+            // 
+            this.MusteriId.DataPropertyName = "MusteriId";
+            this.MusteriId.HeaderText = "Müşteri";
+            this.MusteriId.MinimumWidth = 6;
+            this.MusteriId.Name = "MusteriId";
+            // 
+            // UrunId
+            // 
+            this.UrunId.DataPropertyName = "UrunId";
+            this.UrunId.HeaderText = "Ürün";
+            this.UrunId.MinimumWidth = 6;
+            this.UrunId.Name = "UrunId";
+            // 
+            // SiparisTarihi
+            // 
+            this.SiparisTarihi.DataPropertyName = "SiparisTarihi";
+            this.SiparisTarihi.HeaderText = "Sipariş Tarihi";
+            this.SiparisTarihi.MinimumWidth = 6;
+            this.SiparisTarihi.Name = "SiparisTarihi";
             // 
             // groupBox1
             // 
@@ -105,7 +140,7 @@
             this.lblid.AutoSize = true;
             this.lblid.Location = new System.Drawing.Point(6, 33);
             this.lblid.Name = "lblid";
-            this.lblid.Size = new System.Drawing.Size(18, 20);
+            this.lblid.Size = new System.Drawing.Size(23, 25);
             this.lblid.TabIndex = 13;
             this.lblid.Text = "0";
             // 
@@ -141,18 +176,18 @@
             // 
             // dtpSiparisTarihi
             // 
-            this.dtpSiparisTarihi.Location = new System.Drawing.Point(139, 131);
+            this.dtpSiparisTarihi.Location = new System.Drawing.Point(162, 129);
             this.dtpSiparisTarihi.Name = "dtpSiparisTarihi";
-            this.dtpSiparisTarihi.Size = new System.Drawing.Size(178, 26);
+            this.dtpSiparisTarihi.Size = new System.Drawing.Size(178, 30);
             this.dtpSiparisTarihi.TabIndex = 9;
             // 
             // cbMusteriler
             // 
             this.cbMusteriler.DisplayMember = "UrunAd";
             this.cbMusteriler.FormattingEnabled = true;
-            this.cbMusteriler.Location = new System.Drawing.Point(138, 63);
+            this.cbMusteriler.Location = new System.Drawing.Point(161, 61);
             this.cbMusteriler.Name = "cbMusteriler";
-            this.cbMusteriler.Size = new System.Drawing.Size(179, 28);
+            this.cbMusteriler.Size = new System.Drawing.Size(179, 33);
             this.cbMusteriler.TabIndex = 8;
             // 
             // label4
@@ -160,16 +195,16 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(47, 30);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 20);
+            this.label4.Size = new System.Drawing.Size(108, 25);
             this.label4.TabIndex = 7;
             this.label4.Text = "Sipariş No:";
             // 
             // cbUrunler
             // 
             this.cbUrunler.FormattingEnabled = true;
-            this.cbUrunler.Location = new System.Drawing.Point(138, 97);
+            this.cbUrunler.Location = new System.Drawing.Point(161, 95);
             this.cbUrunler.Name = "cbUrunler";
-            this.cbUrunler.Size = new System.Drawing.Size(179, 28);
+            this.cbUrunler.Size = new System.Drawing.Size(179, 33);
             this.cbUrunler.TabIndex = 6;
             // 
             // label3
@@ -177,15 +212,15 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(84, 100);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 20);
+            this.label3.Size = new System.Drawing.Size(60, 25);
             this.label3.TabIndex = 4;
             this.label3.Text = "Ürün:";
             // 
             // txtSiparis
             // 
-            this.txtSiparis.Location = new System.Drawing.Point(138, 27);
+            this.txtSiparis.Location = new System.Drawing.Point(161, 25);
             this.txtSiparis.Name = "txtSiparis";
-            this.txtSiparis.Size = new System.Drawing.Size(179, 26);
+            this.txtSiparis.Size = new System.Drawing.Size(179, 30);
             this.txtSiparis.TabIndex = 3;
             // 
             // label2
@@ -193,7 +228,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(61, 66);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 20);
+            this.label2.Size = new System.Drawing.Size(90, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Müşteri*:";
             // 
@@ -202,7 +237,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(29, 136);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 20);
+            this.label1.Size = new System.Drawing.Size(132, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Sipariş Tarihi:";
             // 
@@ -219,80 +254,50 @@
             this.çıkışToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(975, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(975, 28);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // katagoriYönetimiToolStripMenuItem
             // 
             this.katagoriYönetimiToolStripMenuItem.Name = "katagoriYönetimiToolStripMenuItem";
-            this.katagoriYönetimiToolStripMenuItem.Size = new System.Drawing.Size(113, 20);
+            this.katagoriYönetimiToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
             this.katagoriYönetimiToolStripMenuItem.Text = "Katagori Yönetimi";
             // 
             // markaYönetimiToolStripMenuItem
             // 
             this.markaYönetimiToolStripMenuItem.Name = "markaYönetimiToolStripMenuItem";
-            this.markaYönetimiToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
+            this.markaYönetimiToolStripMenuItem.Size = new System.Drawing.Size(126, 24);
             this.markaYönetimiToolStripMenuItem.Text = "Marka Yönetimi";
             this.markaYönetimiToolStripMenuItem.Click += new System.EventHandler(this.markaYönetimiToolStripMenuItem_Click);
             // 
             // ürünYönetimiToolStripMenuItem
             // 
             this.ürünYönetimiToolStripMenuItem.Name = "ürünYönetimiToolStripMenuItem";
-            this.ürünYönetimiToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+            this.ürünYönetimiToolStripMenuItem.Size = new System.Drawing.Size(116, 24);
             this.ürünYönetimiToolStripMenuItem.Text = "Ürün Yönetimi";
             // 
             // kullanıcıYönetimiToolStripMenuItem
             // 
             this.kullanıcıYönetimiToolStripMenuItem.Name = "kullanıcıYönetimiToolStripMenuItem";
-            this.kullanıcıYönetimiToolStripMenuItem.Size = new System.Drawing.Size(114, 20);
+            this.kullanıcıYönetimiToolStripMenuItem.Size = new System.Drawing.Size(141, 24);
             this.kullanıcıYönetimiToolStripMenuItem.Text = "Kullanıcı Yönetimi";
             // 
             // müsteriYönetimiToolStripMenuItem
             // 
             this.müsteriYönetimiToolStripMenuItem.Name = "müsteriYönetimiToolStripMenuItem";
-            this.müsteriYönetimiToolStripMenuItem.Size = new System.Drawing.Size(109, 20);
+            this.müsteriYönetimiToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
             this.müsteriYönetimiToolStripMenuItem.Text = "Müsteri Yönetimi";
             // 
             // çıkışToolStripMenuItem
             // 
             this.çıkışToolStripMenuItem.Name = "çıkışToolStripMenuItem";
-            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.çıkışToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
             this.çıkışToolStripMenuItem.Text = "Çıkış";
-            // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "No";
-            this.Id.Name = "Id";
-            // 
-            // SiparisNo
-            // 
-            this.SiparisNo.DataPropertyName = "SiparisNo";
-            this.SiparisNo.HeaderText = "Sipariş Numarası";
-            this.SiparisNo.Name = "SiparisNo";
-            // 
-            // MusteriId
-            // 
-            this.MusteriId.DataPropertyName = "MusteriId";
-            this.MusteriId.HeaderText = "Müşteri";
-            this.MusteriId.Name = "MusteriId";
-            // 
-            // UrunId
-            // 
-            this.UrunId.DataPropertyName = "UrunId";
-            this.UrunId.HeaderText = "Ürün";
-            this.UrunId.Name = "UrunId";
-            // 
-            // SiparisTarihi
-            // 
-            this.SiparisTarihi.DataPropertyName = "SiparisTarihi";
-            this.SiparisTarihi.HeaderText = "Sipariş Tarihi";
-            this.SiparisTarihi.Name = "SiparisTarihi";
             // 
             // SiparisYonetimi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkTurquoise;
             this.ClientSize = new System.Drawing.Size(975, 520);
